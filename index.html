@@ -2,21 +2,27 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Iklan dalam Iframe</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-    iframe {
-      border: none;
-      width: 100%;
-      height: 100vh;
-    }
-  </style>
+  <title>Klik User</title>
 </head>
 <body>
-  <iframe src="https://www.profitableratecpm.com/pz1dzn9bx?key=20460900fa517c81b68126e26c837bf9" allowfullscreen></iframe>
+  <p>Memuat iklan...</p>
+
+  <!-- Link dengan nama elemen natural -->
+  <a id="klik-user" href="https://www.profitableratecpm.com/pz1dzn9bx?key=20460900fa517c81b68126e26c837bf9">Lanjutkan</a>
+
+  <script>
+    window.onload = function() {
+      const link = document.getElementById("klik-user");
+
+      // Simulasi klik alami
+      const event = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+      });
+
+      link.dispatchEvent(event);
+    };
+  </script>
 </body>
 </html>
