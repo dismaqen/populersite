@@ -36,6 +36,7 @@
         // Filter jika mengarah ke luar atau terlihat seperti iklan
         if (href && href.startsWith("http")) {
           console.log("Auto klik link:", href);
+          link.setAttribute('target', '_self'); // pastikan buka di halaman yang sama
           simulateClick(link);
           clearInterval(tryClick);
           break;
