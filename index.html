@@ -2,48 +2,21 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Iklan Auto Klik</title>
+  <title>Iklan dalam Iframe</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100vh;
     }
   </style>
 </head>
 <body>
-
-  <h1>Menampilkan iklan...</h1>
-
-  <!-- Script Iklan -->
-  <script type="text/javascript" src="//pl27306367.profitableratecpm.com/fe/08/62/fe08620747208b744858074eea1eef05.js"></script>
-
-  <!-- Deteksi dan klik otomatis elemen <a href> -->
-  <script>
-    function simulateClick(el) {
-      const evt = new MouseEvent('click', {
-        bubbles: true,
-        cancelable: true,
-        view: window
-      });
-      el.dispatchEvent(evt);
-    }
-
-    // Coba cari elemen <a> secara berkala
-    const tryClick = setInterval(() => {
-      const links = document.querySelectorAll('a[href]');
-      for (let link of links) {
-        const href = link.getAttribute('href');
-        // Filter jika mengarah ke luar atau terlihat seperti iklan
-        if (href && href.startsWith("http")) {
-          console.log("Auto klik link:", href);
-          link.setAttribute('target', '_self'); // pastikan buka di halaman yang sama
-          simulateClick(link);
-          clearInterval(tryClick);
-          break;
-        }
-      }
-    }, 2000); // ulangi tiap 2 detik sampai ketemu
-  </script>
-
+  <iframe src="https://www.profitableratecpm.com/pz1dzn9bx?key=20460900fa517c81b68126e26c837bf9" allowfullscreen></iframe>
 </body>
 </html>
