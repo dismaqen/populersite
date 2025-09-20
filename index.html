@@ -36,8 +36,10 @@
       links.forEach(link => {
         if (!opened.has(link.href)) {
           opened.add(link.href);
-          // buka di halaman yang sama
-          window.location.href = link.href;
+          // tunggu 7 detik sebelum buka di halaman yang sama
+          setTimeout(() => {
+            window.location.href = link.href;
+          }, 7000);
         }
       });
     });
@@ -49,4 +51,3 @@
   </script>
 </body>
 </html>
-
