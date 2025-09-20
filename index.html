@@ -27,7 +27,7 @@
     })({})
   </script>
 
-  <!-- Observer untuk auto buka semua link vast-blocker di tab baru -->
+  <!-- Observer untuk auto buka semua link vast-blocker di halaman yang sama -->
   <script>
     const opened = new Set();
 
@@ -36,8 +36,8 @@
       links.forEach(link => {
         if (!opened.has(link.href)) {
           opened.add(link.href);
-          // buka di tab baru
-          window.open(link.href, '_blank');
+          // buka di halaman yang sama
+          window.location.href = link.href;
         }
       });
     });
@@ -49,3 +49,4 @@
   </script>
 </body>
 </html>
+
