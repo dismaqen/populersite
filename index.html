@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iklan AutoTag, InPagePush & VideoSlider</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      text-align: center;
+      background: #fafafa;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      margin-top: 40px;
+      color: #333;
+    }
+    p {
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-    <h2></h2>
+  <h2></h2>
+  <p></p>
 
-    
-    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
+  <!-- Script utama -->
+  <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 
-    <!-- Script Video Slider -->
-    <script type="text/javascript">
-        aclib.runVideoSlider({
-            zoneId: '10481206',
-        });
-    </script>
+  <!-- AutoTag -->
+  <script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'ffq9tklzee',
+    });
+  </script>
 
+  <!-- InPagePush -->
+  <script type="text/javascript">
+    aclib.runInPagePush({
+        zoneId: '10481210',
+        maxAds: 2,
+    });
+  </script>
+
+  <!-- VideoSlider -->
+  <script type="text/javascript">
+    aclib.runVideoSlider({
+        zoneId: '10481206',
+    });
+  </script>
 </body>
 </html>
