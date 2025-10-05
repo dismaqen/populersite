@@ -1,53 +1,22 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Klik Vast Ad</title>
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adsterra Video Slider</title>
 </head>
 <body>
-  <!-- Inject script iklan -->
-  <script>
-    (function(rwmjz){
-      var d = document,
-          s = d.createElement('script'),
-          l = d.scripts[d.scripts.length - 1];
-      s.settings = rwmjz || {};
-      s.src = "\/\/respectfultill.com\/biXaVms.dyGtlD0MYZWncP\/BeKmS9SubZNUsl\/k\/PpTtY\/2\/NTTeUB3VOXD\/cHtLNsjaYD1mNAT\/cW4yOXAX";
-      s.async = true;
-      s.referrerPolicy = 'no-referrer-when-downgrade';
-      l.parentNode.insertBefore(s, l);
-    })({})
-  </script>
+    <h2>Contoh Halaman dengan Adsterra Video Slider</h2>
 
-  <!-- Observer untuk auto buka semua link vast-blocker di halaman yang sama -->
-  <script>
-    const opened = new Set();
+    <!-- Script utama Adsterra -->
+    <script id="aclib" type="text/javascript" src="//acscdn.com/script/aclib.js"></script>
 
-    const observer = new MutationObserver(() => {
-      const links = document.querySelectorAll('a.vast-blocker[href]');
-      links.forEach(link => {
-        if (!opened.has(link.href)) {
-          opened.add(link.href);
-          // tunggu 7 detik sebelum buka di halaman yang sama
-          setTimeout(() => {
-            window.location.href = link.href;
-          }, 5000);
-        }
-      });
-    });
+    <!-- Script Video Slider -->
+    <script type="text/javascript">
+        aclib.runVideoSlider({
+            zoneId: '10481206',
+        });
+    </script>
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-  </script>
 </body>
 </html>
